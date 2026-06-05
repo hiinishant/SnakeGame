@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="snake-icon.png">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Snake Game</h1>
+
+    <div class="stats">
+        <span id="scoreDisplay">Score: 0</span>
+        <span id="highScoreDisplay">High Score: 0</span>
+    </div>
+
+    <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+    <div class="controls">
+
+        <div class="side-controls">
+            <button onclick="isPaused = !isPaused">
+                <i class="fa-solid fa-pause"></i>
+            </button>
+        </div>
+
+        <div class="dpad">
+
+            <button onclick="setDirectionUp()">
+                <i class="fa-solid fa-chevron-up"></i>
+            </button>
+
+            <div class="dpad-row">
+
+                <button onclick="setDirectionLeft()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button onclick="setDirectionDown()">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <button onclick="setDirectionRight()">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="side-controls">
+            <button onclick="resetGame()">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    touch-action: manipulation;
+    padding: 8px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: bold;
+}
+
+.stats{
+    width: min(95vw, 600px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+canvas {
+    width: min(95vw, 600px);
+    aspect-ratio: 1 / 1;
+
+    border: 3px solid #ffffff;
+    border-radius: 12px;
+
+    background: #1e1e1e;
+
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.controls {
+    margin-top: 12px;
+
+    width: min(95vw, 500px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dpad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.dpad-row {
+    display: flex;
+    gap: 6px;
+}
+
+button {
+    width: 58px;
+    height: 58px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #2b2b2b;
+    color: white;
+
+    font-size: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        transform 0.12s ease,
+        background 0.12s ease;
+}
+
+button:hover {
+    background: #3b3b3b;
+}
+
+button:active {
+    transform: scale(0.92);
+}
+
+
+button i {
+    pointer-events: none;
+}
+
+
+@media (min-width: 768px) {
+
+    .controls {
+        display: none;
+    }
+
+    canvas {
+        width: min(90vw, 600px);
+    }
+}
+
+
+@media (max-height: 700px) {
+
+    h1 {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+
+    canvas {
+        width: min(90vw, 420px);
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
