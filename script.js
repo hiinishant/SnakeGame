@@ -549,6 +549,11 @@ function drawUI() {
 
 canvas.addEventListener("touchstart", (e) => {
 
+    if (!gameStarted) {
+        gameStarted = true;
+        return;
+    }
+
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
 
@@ -607,7 +612,7 @@ function gameLoop(timestamp) {
         ctx.font = "25px Arial";
 
         ctx.fillText(
-            "Press SPACE to Start",
+            "Tap Screen or Press SPACE to Start",
             canvas.width / 2,
             canvas.height / 2 + 20
         );
