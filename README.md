@@ -1,1 +1,1 @@
-Click link to open game hiinishat.github.io/SnakeGame
+Click link to open game (https://hiinishant.github.io/SnakeGame/)
